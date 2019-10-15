@@ -1,4 +1,5 @@
 let gameScore=0;
+let name = "";
 
 //Create Game Timer
 function countDown () {
@@ -10,8 +11,8 @@ function countDown () {
 
         if (timeleft == 0 || $(".filled").length === 3){
             if ($(".filled").length === 3) {
-                gameScore += 10;
-                alert("Great Job! You have won a $10 voucher!");
+                gameScore = (10 * timeleft);
+                alert("Great Job! You have won $" + gameScore);
             }
             else {
                 document.getElementById("countdown").innerHTML = "Game Over!";
@@ -19,6 +20,13 @@ function countDown () {
             clearInterval(downloadTimer);
             $("#boxes").empty();
             $("#colors").empty();
+
+            //append player name and score to leaderboard
+            name = $("#name").val();
+            let playerhtml = '<tr><td>' + name + '</td><td>' + gameScore + '</td></tr>';
+            $("#score").append(playerhtml);
+
+
             $("#leaderboard").show();
         }
     }, 1000);
@@ -66,23 +74,13 @@ function createPictureBoxes(colors) {
         });
     }
 }
-function Player(myName, myScore) {
+
+    function Player(myName, myScore) {
         this.name = myName;
-        this.gameScore = myScore;}
-
-    // Create new players
-    player1 = new Player("Tom", 50);
-    player2 = new Player("Michael", 100);
-    player3 = new Player("Lisa",10);
-    player4 = new Player("Doreen",20);
-
-    function displayLeaderboard() {
-        let leaderboard = "";
-        Players.sort((aPlayer, bPlayer) => aPlayer.gameScore - bPlayer.gameScore);
-        Players.forEach((player) => leaderboard += '<tr><td>' + player.name + '</td><td>' + player.gameScore + '</td></tr>');
-        document.getElementById("scoreBoard").aside = leaderboard;
-        // document.getElementById("scoreBoard").aside.innerHTML = leaderboard;
+        this.gameScore = myScore;
     }
+
+
 
 //Game
 $(()=>{
@@ -90,6 +88,8 @@ $(()=>{
 });
 
 function gameStarts() {
+    $("#leaderboard").hide();
+
     var i = 0;
     var colors = randomize(
         [
@@ -101,6 +101,7 @@ function gameStarts() {
              key: 'wind sculpture'}
         ]
     );
+
     // myScoreBal.text = "Points: $" + gameScore;
 
     createPictureBoxes(colors);
@@ -111,7 +112,7 @@ function gameStarts() {
 
     makeBoxesDroppable(colors);
 
-    Player();
+    //Player(myName, myScoreBal);
 };
 
 function setGameTimeout (){

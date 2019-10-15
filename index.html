@@ -17,7 +17,7 @@
 <div>
             <div>
                 <h6>a discovery journey about Maple
-                <label>Name</label>&nbsp<input type="text" name="name" placeholder="First name">
+                <label>Name</label>&nbsp<input id="name" type="text" name="name" placeholder="First name">
         		<label>Dept</label>&nbsp
         			<select name="dept">
         				<option value="hr">Human Resource</option>
@@ -54,23 +54,29 @@
 
 <div id="countdown"></div>
 
-<!-- <aside>
+<aside id="leaderboard">
     <table class="table table-striped">
       <thead>
         <tr>
+            <!-- <th scope="col">#</th> -->
           <th scope="col">Player</th>
           <th scope="col">Score</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="score">
         <tr>
-          <th scope="row">1</th>
-          <td>this.myName[]</td>
-          <td>this.myScore[]</td>
+          <!-- <th scope="row">1</th> -->
+          <td>Tom</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">2</th> -->
+          <td>Michael</td>
+          <td>50</td>
         </tr>
       </tbody>
     </table>
-</aside> -->
+</aside>
 
 <script type="text/javascript" src="app.js"></script>
 </body>
