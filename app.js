@@ -4,7 +4,7 @@ let name = "";
 //Create Game Timer
 function countDown () {
     console.log("running countdown");
-    var timeleft = 5;
+    var timeleft = 10;
     var downloadTimer = setInterval(function(){
         timeleft=timeleft-1;
         document.getElementById("countdown").innerHTML = timeleft + " sec remaining";
