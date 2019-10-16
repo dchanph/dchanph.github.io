@@ -28,6 +28,7 @@ function countDown () {
 
 
             $("#leaderboard").show();
+            gameScore = 0;
         }
     }, 1000);
 }
