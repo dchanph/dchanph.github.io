@@ -78,10 +78,10 @@ function createPictureBoxes(colors) {
     }
 }
 
-    function Player(myName, myScore) {
-        this.name = myName;
-        this.gameScore = myScore;
-    }
+function Player(myName, myScore) {
+    this.name = myName;
+    this.gameScore = myScore;
+}
 
 
 
@@ -97,14 +97,14 @@ function gameStarts() {
     var colors = randomize(
         [
             {url: 'images/art_lighthse.png',
-             key: 'light house'},
+            key: 'light house'},
             {url: 'images/art_maple.png',
-             key: 'maple'},
+            key: 'maple'},
             {url: 'images/artWindSculpture.png',
-             key: 'wind sculpture'}
+            key: 'wind sculpture'}
         ]
     );
-
+    
     // myScoreBal.text = "Points: $" + gameScore;
     alert("Please enter your first name and select your dept.");
 
