@@ -21,7 +21,7 @@ function countDown () {
             $("#boxes").empty();
             $("#colors").empty();
 
-            //append player name and score to leaderboard
+//append player name and score to leaderboard
             name = $("#name").val();
             let playerhtml = '<tr><td>' + name + '</td><td>' + gameScore + '</td></tr>';
             $("#score").append(playerhtml);
@@ -78,21 +78,22 @@ function createPictureBoxes(colors) {
     }
 }
 
+//Create function for player's name and score
 function Player(myName, myScore) {
     this.name = myName;
     this.gameScore = myScore;
 }
 
-
-
-//Game
+//Initializes countdown
 $(()=>{
     setGameTimeout();
 });
 
+//Shows Leaderboard when game ends
 function gameStarts() {
     $("#leaderboard").hide();
 
+//Randomizes boxes for key and images
     var i = 0;
     var colors = randomize(
         [
@@ -104,10 +105,11 @@ function gameStarts() {
             key: 'wind sculpture'}
         ]
     );
-    
-    // myScoreBal.text = "Points: $" + gameScore;
+
+// Prompt to enter first name and select dept
     alert("Please enter your first name and select your dept.");
 
+// Game starts
     createPictureBoxes(colors);
 
     randomize(colors);
@@ -116,7 +118,6 @@ function gameStarts() {
 
     makeBoxesDroppable(colors);
 
-    //Player(myName, myScoreBal);
 };
 
 function setGameTimeout (){
