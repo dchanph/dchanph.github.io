@@ -12,7 +12,7 @@ function countDown () {
         if (timeleft == 0 || $(".filled").length === 3){
             if ($(".filled").length === 3) {
                 gameScore = (10 * timeleft);
-                alert("Great Job! You have won $" + gameScore);
+                alert("Great Job! You have won $" + gameScore + "!");
             }
             else {
                 document.getElementById("countdown").innerHTML = "Game Over!";
