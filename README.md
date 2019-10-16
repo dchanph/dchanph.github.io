@@ -20,6 +20,6 @@ None
 Credit:
 Reference to codes on:
 https://stackoverflow.com/questions/44728978/change-this-color-match-game-to-image-match-in-js-and-jquery;
-Guidance from GA instructor: Henry Neo
-Guidance from GA TA: Bryan Lee
+This production is made possible through the guidance from General Assembly's instructor Henry Neo and 
+teaching assistant, Bryan Lee.
 
