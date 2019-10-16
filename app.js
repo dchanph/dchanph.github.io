@@ -4,7 +4,7 @@ let name = "";
 //Create Game Timer
 function countDown () {
     console.log("running countdown");
-    var timeleft = 10;
+    var timeleft = 5;
     var downloadTimer = setInterval(function(){
         timeleft=timeleft-1;
         document.getElementById("countdown").innerHTML = timeleft + " sec remaining";
@@ -29,6 +29,8 @@ function countDown () {
 
             $("#leaderboard").show();
             gameScore = 0;
+            console.log("hi");
+            $("#name").val('');
         }
     }, 1000);
 }
@@ -104,6 +106,7 @@ function gameStarts() {
     );
 
     // myScoreBal.text = "Points: $" + gameScore;
+    alert("Please enter your first name and select your dept.");
 
     createPictureBoxes(colors);
 
