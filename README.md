@@ -1,27 +1,33 @@
 # dchanph.github.io
 The Onboarding
 
-The Onboarding is a gamification created to disseminate information about Maple to its staff in a fun way.
+This gamification aims at sharing corporate information such as events etc with staff at anytime and is accessible from anywhere.  Playing a drag and drop game, the player learns more information about the company. 
 
-It is intentionally kept simple:
-a. One player at a time.
-b. Drag and drop the pictures into the correct boxes within a short time frame.
-c. Motivate the player to win more by rewarding with $10 for every second left in the game.
+This version 1 of the game is designed for a single player and a single game. Player earns $1 for every second left in the game.  Each game is timed for completion within 10 seconds.
+
+Key design features:
+
+a.	Statistics - collect player’s information (name and department) to ascertain site visits and acts as a measure for return on investment for creating the gamification.
+
+b.	Rules board – provide information on game play and rewards.
+
+c.	Information board – show question by topic, a wiki which provides lead on information and directs player to additional information site.
+
+d.	Game board – randomize boxes showing key information and images and allows drag and drop of images into the correct boxes. 
+
+e.	Countdown timer – motivate player to finish the game quickly through display of time left and intentionally kept the play duration short. This is achieved by rewarding player $1 for every second saved before ending of game.
+
+f.	Leaderboard – display score of players.
+
+The game's design is kept simple so as to allow quick loading of images. Concise information so as to sustain player’s interest. Short time play so as to challenge the player's agility.
 
 Technologies adopted:
-Use of bootstrap, css, javascript, jquery and html.
 
-Functionalities:
-a. Alerts player to enter name, select department and clicks Start Game.
-b. Allows input of player's name and department.
-c. Allows player to select his department.
-d. Asks player a question.
-e. Provides additional information related to the question.
-f. Links to website providing relevant information (opens in a new page).
-g. Allows drag and drop of pictures related to the right box with a key word of the picture.  Pictures and boxes will randomize. If picture is not in box, it will return to position. If picture is placed in wrong box, it will return to its stack's position.
-h. Shows a timer which displays countdown.
-i. When game ends, shows the leaderboard with score.
-j. Game score and name field will reset when game is over.
+a.	Ajax for google fonts
+b.	Bootstrap for buttons and card display boards
+c.	HTML for web display
+d.	Javascript and jquery for game flow
+e.	CSS for styling
 
 Link to live site:
 https://github.com/dchanph/dchanph.github.io.
@@ -29,14 +35,21 @@ https://github.com/dchanph/dchanph.github.io.
 Unsolved problems:
 None
 
-Enhancements:
-a. To rank users on leaderboard.
-b. To show a live scoreboard when game is on.
-c. To add more games.
+Enhancements in version 2:
+
+a.	Information board – to be an array of questions and information banks. To allow player to choose topic of interest (so as to gauge interest of players).
+
+b.	Game board – to increase number of games and to allow multiple players.
+
+c.	Leaderboard – to rank players’ scores.
+
+Total number of commits for game: 138 (please refer to course materials/w8d1/homework/test for most of the commits.
 
 Credit:
-Reference to codes on:
+
+This production is made possible through the guidance and improvement suggestions from General Assembly's instructor, Henry Neo and teaching assistant, Bryan Lee.
+
+Also, by refencing codes on:
 https://stackoverflow.com/questions/44728978/change-this-color-match-game-to-image-match-in-js-and-jquery;
-This production is made possible through the guidance from General Assembly's instructor Henry Neo and 
-teaching assistant, Bryan Lee.
+
 
