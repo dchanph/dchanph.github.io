@@ -7,19 +7,52 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Maple Events</h1>
-    <h2>Create New Event</h2>
-    <form action="/events" method="POST">
-      Event_ID: <input type="text" name="eventId" /><br /><br />
-      Title: <input type="text" name="Title" /><br /><br />
-      Description:
-      <input type="text" name="description" /><br /><br />
-      Location: <input type="text" name="location" /><br /><br />
-      Start_date: <input type="Date" name="startDate" /><br /><br />
-      Start_time: <input type="hour" name="startTime" /><br /><br />
-      End_date: <input type="Date" name="endDate" /><br /><br />
-      End_time: <input type="hour" name="endTime" /><br /><br />
-      <input type="submit" name="" value="Create Event" />
-    </form>
+    <div class="container">
+      <h3>Create a new event</h3>
+      <div class="jumbo">
+        <form class="edit" action="/events" method="POST">
+          <label for="title">Event_ID </label><br />
+          <input type="text" name="eventID" value="" required /><br /><br />
+          <label for="title">Title </label><br />
+          <input type="text" name="title" value="" required /><br /><br />
+          <label for="img">Image </label><br />
+          <input type="text" name="img" value="" /><br /><br />
+          <label for="description">Description </label><br />
+          <input type="textarea" name="description" value="" /><br /><br />
+          <label for="title">Location </label><br />
+          <input type="text" name="location" value="" /><br /><br />
+          <label for="title">Start Date </label>
+          <input type="date" name="startDate" value="" />
+          <label for="title">Start Time </label>
+          <input type="hour" name="startTime" value="" /><br /><br />
+          <label for="title">End Date </label>
+          <input type="date" name="endDate" value="" />
+          <label for="title">End Time </label>
+          <input type="hour" name="endTime" value="" /><br /><br />
+          <label for="price">Price </label><br />
+          <input
+            type="number"
+            name="price"
+            min="0"
+            step=".01"
+            value="0"
+          /><br /><br />
+          <label for="qty">Total Tickets </label><br />
+          <input
+            type="number"
+            name="qty"
+            pattern="[0-1000]*"
+            min="0"
+            value="0"
+          /><br /><br />
+          <input
+            type="submit"
+            name="submit"
+            value="Create Event"
+            class="create-button"
+          />
+        </form>
+      </div>
+    </div>
   </body>
 </html>
