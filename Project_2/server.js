@@ -3,7 +3,7 @@ const app = express();
 
 //Create New route
 app.get("/events/new", (req, res) => {
-  res.send("new");
+  res.render("new.ejs");
 });
 
 app.listen(3000, () => {
