@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Edit an event</h3>
+      <div class="jumbo">
+        <form action="/events/<%=event._id%>?_method=PUT" method="post">
+          <label for="title">Title </label><br />
+          <input
+            type="text"
+            name="title"
+            value="<%= event.title%>"
+            required
+          /><br /><br />
+          <label for="img">Image </label><br />
+          <input type="text" name="img" value="" /><br /><br />
+          <label for="description">Description </label><br />
+          <input type="textarea" name="description" value="" /><br /><br />
+          <label for="title">Location </label><br />
+          <input type="text" name="location" value="" /><br /><br />
+          <label for="title">Start Date </label>
+          <input type="date" name="startDate" value="" />
+          <label for="title">Start Time </label>
+          <input type="time" name="startTime" value="" /><br /><br />
+          <label for="title">End Date </label>
+          <input type="date" name="endDate" value="" />
+          <label for="title">End Time </label>
+          <input type="time" name="endTime" value="" /><br /><br />
+          <label for="price">Price </label><br />
+          <input
+            type="number"
+            name="price"
+            min="0"
+            step=".01"
+            value="0"
+          /><br /><br />
+          <label for="qty">Total Tickets </label><br />
+          <input
+            type="number"
+            name="maxTickets"
+            pattern="[0-1000]*"
+            min="0"
+            value="0"
+          /><br /><br />
+          <input
+            type="submit"
+            name="submit"
+            value="Update Event"
+            class="update-button"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
