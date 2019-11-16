@@ -19,26 +19,42 @@
             required
           /><br /><br />
           <label for="img">Image </label><br />
-          <input type="text" name="img" value="" /><br /><br />
+          <input type="text" name="img" value="<%= event.img%>" /><br /><br />
           <label for="description">Description </label><br />
-          <input type="textarea" name="description" value="" /><br /><br />
+          <input
+            type="textarea"
+            name="description"
+            value="<%= event.description%>"
+          /><br /><br />
           <label for="title">Location </label><br />
-          <input type="text" name="location" value="" /><br /><br />
+          <input
+            type="text"
+            name="location"
+            value="<%= event.location>"
+          /><br /><br />
           <label for="title">Start Date </label>
-          <input type="date" name="startDate" value="" />
+          <input type="date" name="startDate" value="<%= event.startDate>" />
           <label for="title">Start Time </label>
-          <input type="time" name="startTime" value="" /><br /><br />
+          <input
+            type="time"
+            name="startTime"
+            value="<%= event.startTime%>"
+          /><br /><br />
           <label for="title">End Date </label>
-          <input type="date" name="endDate" value="" />
+          <input type="date" name="endDate" value="<%= event.endDate%>" />
           <label for="title">End Time </label>
-          <input type="time" name="endTime" value="" /><br /><br />
+          <input
+            type="time"
+            name="endTime"
+            value="<%= event.endTime%>"
+          /><br /><br />
           <label for="price">Price </label><br />
           <input
             type="number"
             name="price"
             min="0"
             step=".01"
-            value="0"
+            value="<%= event.price%>"
           /><br /><br />
           <label for="qty">Total Tickets </label><br />
           <input
@@ -46,7 +62,7 @@
             name="maxTickets"
             pattern="[0-1000]*"
             min="0"
-            value="0"
+            value="<%= event.number%>"
           /><br /><br />
           <input
             type="submit"
