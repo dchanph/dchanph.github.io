@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
     <header id="main header">
@@ -24,7 +24,7 @@
         </ul>
       </div>
     </nav>
-    <section id="showcase">
+    <!-- <section id="showcase">
       <div class="container">
         <h2>
           Event <br />
@@ -32,7 +32,7 @@
           Date <br />
         </h2>
       </div>
-    </section>
+    </section> -->
     <section id="about">
       <div class="container">
         <p>
@@ -42,13 +42,17 @@
       </div>
     </section>
 
-    <aside id="event_details">
-      <div class="container">
-        <h3>Double Bill</h3>
-        <h4>16 Dec 2019</h4>
-        <h5>12pm to 1pm</h5>
-        <h5>MBC Civic Plaza</h5>
-      </div>
-    </aside>
+    <section id="details">
+        <div class="container">
+    <% for(let i=0; i<events.length; i++) { %>
+            <div>
+              <h3><a href="/events/<%=events[i]._id%>"><%= events[i].title %></a></h3>
+              <h4>16 Dec 2019</h4>
+              <h5>12pm to 1pm</h5>
+              <h5>MBC Civic Plaza</h5>
+            </div>
+    <% } %>
+        </div>
+        </section>
   </body>
 </html>
