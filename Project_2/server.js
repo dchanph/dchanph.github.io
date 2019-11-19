@@ -33,7 +33,7 @@ app.use(
 
 // Use Controllers and Routes
 app.use("/events", eventsController);
-// app.use("/registration", registrationController);
+app.use("/registration", registrationController);
 app.use("/users", usersController);
 app.use("/sessions", sessionsController);
 

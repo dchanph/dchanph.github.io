@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h3>Register for an event</h3>
+      <div class="jumbo">
+        <form class="edit" action="/registration" method="POST">
+          <label for="user">Staff_ID </label><br />
+          <input
+            type="text"
+            name="user"
+            placeholder="Enter Staff ID"
+            value="<%=currentUser._id%>"
+            required
+          /><br /><br />
+          <label for="name">Name </label><br />
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter full name"
+            value="<%=currentUser.name%>"
+            required
+          /><br /><br />
+          <label for="ticketsQty">Number of Tickets </label><br />
+          <input
+            type="number"
+            name="ticketsQty"
+            pattern="[0-10]*"
+            min="0"
+            value="0"
+          /><br /><br />
+          <input
+            type="submit"
+            name="submit"
+            value="Register"
+            class="register-button"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
