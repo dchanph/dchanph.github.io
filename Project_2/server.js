@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 
 const eventsController = require("./controllers/events.js");
+const usersController = require("./controllers/users.js");
 
 const app = express();
 
@@ -10,8 +11,10 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
+
 // Use Controllers and Routes
 app.use("/events", eventsController);
+app.use("/users", usersController);
 
 //connect to database
 mongoose.connect("mongodb://localhost:27017/eventsProject", {
