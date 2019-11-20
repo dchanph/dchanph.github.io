@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const registrationSchema = mongoose.Schema({
   user: { type: Schema.Types.ObjectId, ref: "User" },
-  name: String,
-  department: String,
+  first_name: String,
+  dept: String,
   event: { type: Schema.Types.ObjectId, ref: "Event" },
   ticketsQty: Number,
   totalCost: Number
@@ -13,3 +13,5 @@ const registrationSchema = mongoose.Schema({
 const Registration = mongoose.model("Registration", registrationSchema);
 
 module.exports = Registration;
+
+//events/:eventsID/registration/new

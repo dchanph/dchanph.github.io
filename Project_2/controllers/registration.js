@@ -51,6 +51,7 @@ router.get("/:id", (req, res) => {
 
 // // Create : POST   '/registration'
 router.post("/", (req, res) => {
+  console.log(req.body);
   Registration.create(req.body, (err, registration) => {
     if (err) {
       res.send(err);

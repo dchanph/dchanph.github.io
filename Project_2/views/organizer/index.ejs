@@ -24,16 +24,8 @@
             <div>
                 <div class="row">
                     <div class="col s6 m7">
-                        <!-- <div class="row">
-                            <div class="col s6"></div>
-                            <div class="col s6"></div>
-                            <div class="col s6"></div>
-                          </div> -->
-                                
                       <div class="card">
                         <div class="card-image">
-                            <!-- <a href="/events/<%=events[i]._id%>"><%= events[i].img %></a> -->
-                                <!-- <a href="javascript:nextImage('mainImg')"><img src="Images/next_img.png" alt=""></a> -->
                           <img src="<%= events[i].img %>">
                         </div>
                         <div class="card-content">
@@ -48,6 +40,10 @@
                   </div>
     <% } %>
         </div>
+        </section>
+        <section id="eventsmgt">
+          <a href="/events/show">Show a list of events</a>
+          <a href="/events/new">Create a new event</a>
         </section>
   </body>
 </html>
