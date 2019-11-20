@@ -6,19 +6,55 @@
  * Made By MaterializeCSS.com
  */
 
+ .navbar{
+margin-top: 0px;
+color: coral;
+ }
+
 @font-face {
   font-family: "Anton", sans-serif;
   src: url(../fonts/Anton-Regular.ttf);
-}
+  font-family: 'Abril Fatface', cursive;
+	src: url(../fonts/AbrilFatFace-Regular.ttf);}
 
-h3 {
+
+h2{
   font-family: "Anton", sans-serif;
   text-align: left;
   color: white;
-  margin-left: 0px;
+  margin-left: 10px;
+  margin-top: 150px;
+  font-size: 50px;
+}
+h3 {
+  font-family: "Anton", sans-serif;
+  text-align: left;
+  color: #fcba03;
+  margin-left: 370px;
+  margin-top: 90px;
+  font-size: 30px;
+}
+
+h4 {
+  font-family: "Anton", sans-serif;
+  text-align: left;
+  color: black;
+  margin-left: 5px;
   margin-top: 0px;
   font-size: 20pt;
 }
+
+#about{
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+  color: black;
+  margin-left: 10px;
+  margin-top: 500px;
+  font-size: 30px;
+  line-height: 3rem;
+}
+
+
 
 #main-header {
   background-image: url("/Images/Birdrace.png");
@@ -27,7 +63,7 @@ h3 {
   min-height: 380px;
   line-height: 0;
   height: auto;
-  top: 62px;
+  top: 65px;
   width: 100%;
   left: 0;
 
@@ -41,10 +77,10 @@ h3 {
     margin-left: -512px;   50%
   }
 
-nav ul a,
+/* nav ul a,
 nav .brand-logo {
   color: #444;
-}
+} */
 
 p {
   line-height: 2rem;
@@ -69,22 +105,11 @@ p {
     position: absolute;
     top: 40%;
   }
-  #index-banner .section {
-    top: 10%;
-  }
-}
 
 @media only screen and (max-width: 600px) {
   #index-banner .section {
     top: 0;
   }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
 }
 
 footer.page-footer {

@@ -5,52 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
     <title>Index</title>
     <% include ../partials/head.ejs %>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
+
   <body>
 <header id="main-header">
-    <background-image:url('/Images/Arts01DoubleBill.jpg');></background-image:url>
-    <h3>EventsFest</h3>  
-</header>
     <nav id="navbar">
-      <div class="container">
-        <ul>
-          <!-- <li><a href="/event/new">Create Events</a></li>
-          <li><a href="/events/">Events</a></li> -->
-          <li><a href="/sessions/new">Log In</a></li>
-          <li><a href="/users/new">Sign up</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- <section id="showcase">
-      <div class="container">
-        <h2>
-          Event <br />
-          Venue <br />
-          Date <br />
-        </h2>
-      </div>
-    </section> -->
+            <ul>
+              <li><a href="/sessions/new">Log In</a></li>
+              <li><a href="/users/new">Sign up</a></li>
+            </ul>
+          </nav>
+    <h2>Curated Events @ MBC</h2>
+    <h3>Labrador Park  |  23 Nov 2019  |  8am to 12pm</h3></div>
+</header>
     <section id="about">
-      <div class="container">
-        <p>
-          We bond and inspire communities through curated purposeful events.
-          Join an event today!
-        </p>
-      </div>
+      <p>
+        Discover the latest events curated<br/><br/> 
+        to change the way we work and play.
+      </p>
     </section>
-
     <section id="details">
         <div class="container">
     <% for(let i=0; i<events.length; i++) { %>
             <div>
-              <h3><a href="/events/<%=events[i]._id%>"><%= events[i].title %></a></h3>
-              <h4>16 Dec 2019</h4>
-              <h5>12pm to 1pm</h5>
-              <h5>MBC Civic Plaza</h5>
-            </div>
+                <div class="row">
+                    <div class="col s12 m7">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="/Images/Arts01Doublebill.png">
+                          <span class="card-title"><a href="/events/<%=events[i]._id%>"><%= events[i].title %></a></span>
+                        </div>
+                        <div class="card-content">
+                            <a href="/events/<%=events[i]._id%>"><%= events[i].description %></a>
+                        </div>
+                        <div class="card-action">
+                          <a href="#">Register</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
     <% } %>
         </div>
         </section>
