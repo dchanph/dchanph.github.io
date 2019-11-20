@@ -11,6 +11,10 @@ margin-top: 0px;
 color: coral;
  }
 
+ nav {
+   background-color: #ff8c00;
+ }
+
 @font-face {
   font-family: "Anton", sans-serif;
   src: url(../fonts/Anton-Regular.ttf);

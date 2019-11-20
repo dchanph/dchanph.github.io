@@ -1,0 +1,15 @@
+<nav id="navbar">
+  <div class="nav-wrapper">
+    <a href="/events" class="brand-logo">Events</a>
+    <ul class="right">
+      <% if(typeof user === 'undefined' || !user){%>
+      <li><a href="/sessions/new">Log In</a></li>
+      <li><a href="/users/new">Sign up</a></li>
+      <%} else {%>
+      <li>
+        <a href="/sessions/logout">Welcome <%= user.first_name%>, logout</a>
+      </li>
+      <%}%>
+    </ul>
+  </div>
+</nav>

@@ -27,7 +27,10 @@ router.get("/", (req, res) => {
       console.log(err);
     }
     console.log("events:" + events);
-    res.render("./organizer/index.ejs", { events });
+    res.render("./organizer/index.ejs", {
+      events,
+      user: req.session.currentUser
+    });
   });
 });
 

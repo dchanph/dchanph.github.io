@@ -8,16 +8,7 @@
     <% include ../partials/head.ejs %>
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
-      </div>
-    </nav>
+    <% include ../partials/nav.ejs %>
     <div class="container">
       <h3>Register for an event</h3>
       <div class="jumbo">
@@ -30,11 +21,19 @@
             value="<%=currentUser._id%>"
             required
           /><br /><br />
-          <label for="name">Name </label><br />
+          <label for="name">first_name </label><br />
           <input
             type="text"
-            name="name"
-            placeholder="Enter full name"
+            name="first_name"
+            placeholder="Enter first name"
+            value="<%=currentUser.name%>"
+            required
+          /><br /><br />
+          <label for="name">last_name </label><br />
+          <input
+            type="text"
+            name="last_name"
+            placeholder="Enter last name"
             value="<%=currentUser.name%>"
             required
           /><br /><br />

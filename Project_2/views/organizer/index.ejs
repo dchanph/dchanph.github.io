@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <title>Index</title>
-    <% include ../partials/head.ejs %>
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+      <% include ../partials/head.ejs %>
   </head>
 
   <body>
+      <% include ../partials/nav.ejs %>
 <header id="main-header">
-    <nav id="navbar">
-            <ul>
-              <li><a href="/sessions/new">Log In</a></li>
-              <li><a href="/users/new">Sign up</a></li>
-            </ul>
-          </nav>
+          
+
     <h2>Curated Events @ MBC</h2>
     <h3>Labrador Park  |  23 Nov 2019  |  8am to 12pm</h3></div>
 </header>
@@ -44,11 +34,11 @@
                         <div class="card-image">
                             <!-- <a href="/events/<%=events[i]._id%>"><%= events[i].img %></a> -->
                                 <!-- <a href="javascript:nextImage('mainImg')"><img src="Images/next_img.png" alt=""></a> -->
-                          <img src="/Images/Arts01Doublebill.png">
-                          <span class="card-title"><a href="/events/<%=events[i]._id%>"><h5><%= events[i].title %><</h5></a></span>
+                          <img src="<%= events[i].img %>">
                         </div>
                         <div class="card-content">
-                            <a href="/events/"><%= events[i].description %></a>
+                            <span class="card-title"><a href="/events/<%=events[i]._id%>"><h5><%= events[i].title %></h5></a></span>
+                            <a href="/events/<%=events[i]._id%>"><%= events[i].description %></a>
                         </div>
                         <div class="card-action">
                           <a href="/registration/new">Register</a>

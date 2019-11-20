@@ -7,30 +7,22 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/events">Events Index</a>
-        </li>
-      </ul>
-    </nav>
+    <% include ../partials/nav.ejs %>
     <header>
       <h1><%=event.title%></h1>
-      <main>
+      
+      <img src="/<%= event.img %>" />
+      <a href="/events/<%=event._id%>/edit">
+      
         <section>
           Description: <%=event.description%>
         </section>
-      </main>
+      
     </header>
-    <section>
-      <img src="/<%= event.img %>" />
-      <a href="/events/<%=event._id%>/edit">Edit</a>
+    <a class="waves-effect waves-light btn-small">Edit</a>
       <!-- delete button here -->
       <form action="/events/<%=event._id%>?_method=DELETE" method="post">
-        <input type="submit" value="DELETE" />
+        <a class="waves-effect waves-light btn-small">Delete</a>
       </form>
     </section>
   </body>
