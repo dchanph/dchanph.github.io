@@ -33,17 +33,25 @@
     <% for(let i=0; i<events.length; i++) { %>
             <div>
                 <div class="row">
-                    <div class="col s12 m7">
+                    <div class="col s6 m7">
+                        <!-- <div class="row">
+                            <div class="col s6"></div>
+                            <div class="col s6"></div>
+                            <div class="col s6"></div>
+                          </div> -->
+                                
                       <div class="card">
                         <div class="card-image">
+                            <!-- <a href="/events/<%=events[i]._id%>"><%= events[i].img %></a> -->
+                                <!-- <a href="javascript:nextImage('mainImg')"><img src="Images/next_img.png" alt=""></a> -->
                           <img src="/Images/Arts01Doublebill.png">
-                          <span class="card-title"><a href="/events/<%=events[i]._id%>"><%= events[i].title %></a></span>
+                          <span class="card-title"><a href="/events/<%=events[i]._id%>"><h5><%= events[i].title %><</h5></a></span>
                         </div>
                         <div class="card-content">
-                            <a href="/events/<%=events[i]._id%>"><%= events[i].description %></a>
+                            <a href="/events/"><%= events[i].description %></a>
                         </div>
                         <div class="card-action">
-                          <a href="#">Register</a>
+                          <a href="/registration/new">Register</a>
                         </div>
                       </div>
                     </div>

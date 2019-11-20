@@ -41,9 +41,17 @@ h4 {
   color: black;
   margin-left: 5px;
   margin-top: 0px;
-  font-size: 20pt;
+  font-size: 20px;
 }
 
+h5 {
+  font-family: "Anton", sans-serif;
+  text-align: left;
+  color: white;
+  margin-left: 5px;
+  margin-top: 0px;
+  font-size: 20px;
+}
 #about{
   font-family: 'Abril Fatface', cursive;
   text-align: center;
