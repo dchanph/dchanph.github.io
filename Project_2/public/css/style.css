@@ -29,7 +29,7 @@ h2{
 h3 {
   font-family: "Anton", sans-serif;
   text-align: left;
-  color: #fcba03;
+  color: #ff8c00;
   margin-left: 370px;
   margin-top: 90px;
   font-size: 30px;
@@ -47,10 +47,10 @@ h4 {
 h5 {
   font-family: "Anton", sans-serif;
   text-align: left;
-  color: white;
+  color: #ff8c00;
   margin-left: 5px;
   margin-top: 0px;
-  font-size: 20px;
+  font-size: 30px;
 }
 #about{
   font-family: 'Abril Fatface', cursive;
