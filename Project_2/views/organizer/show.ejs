@@ -9,21 +9,24 @@
   <body>
     <% include ../partials/nav.ejs %>
     <header>
-      <h1><%=event.title%></h1>
+
+      <h4><%=event.title%></h4><br/><br/></header>
       
       <img src="/<%= event.img %>" />
-      <a href="/events/<%=event._id%>/edit">
+      <a href="/events/<%=event._id%>/edit"><br/><br/>
       
-        <section>
+      <section>
           Description: <%=event.description%>
-        </section>
-      
-    </header>
-    <a class="waves-effect waves-light btn-small">Edit</a>
+      </section>
+        <div class = "fixed-action-btn"
+          <a href="/events/edit" class="btn waves-effect waves-light green white-text">Edit an event</a>
+        </div>
+    
+    <!-- <a class="waves-effect waves-light btn-small">Edit</a> -->
       <!-- delete button here -->
-      <form action="/events/<%=event._id%>?_method=DELETE" method="post">
+      <!-- <form action="/events/<%=event._id%>?_method=DELETE" method="post">
         <a class="waves-effect waves-light btn-small">Delete</a>
       </form>
-    </section>
+    </section> --> -->
   </body>
-</html>
+</html> -->
