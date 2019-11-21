@@ -9,12 +9,12 @@
   <body>
     <% include ../partials/nav.ejs %>
     <header>
-
-      <h4><%=event.title%></h4><br/><br/></header>
-      
+        
+      <div class="row">
+      <h4><%=event.title%></h4><br/><br/></header><br/><br/>
       <img src="/<%= event.img %>" />
       <a href="/events/<%=event._id%>/edit"><br/><br/>
-      
+      </div>
       <section>
           Description: <%=event.description%>
       </section>
