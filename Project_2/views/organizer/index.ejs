@@ -14,23 +14,35 @@
 </header>
     <section id="about">
       <p>
-        Discover the latest events curated<br/><br/> 
-        to change the way we work and play.
+        Discover the latest events to make<br/><br/> 
+        work and play better.
       </p>
+    </section>
+    <section id="eventsmgt">
+      <div class="createButton">
+        <div class = "fixed-action-btn">
+          <a href="/events/new" class="btn waves-effect waves-light green white-text">Create an event</a>
+        </div>
+      </div>
     </section>
     <section id="details">
         <div class="container">
     <% for(let i=0; i<events.length; i++) { %>
             <div>
                 <div class="row">
-                    <div class="col s6 m7">
+                    <div class="col s4">4-columns (one-half)</div>
+                    <div class="col s4">4-columns (one-half)</div>
+                    <!-- <div class="col s4"> -->
                       <div class="card">
                         <div class="card-image">
                           <img src="<%= events[i].img %>">
                         </div>
                         <div class="card-content">
                             <span class="card-title"><a href="/events/<%=events[i]._id%>"><h5><%= events[i].title %></h5></a></span>
-                            <a href="/events/<%=events[i]._id%>"><%= events[i].description %></a>
+                            <a href="/events/<%=events[i]._id%>"><%= events[i].description %></a><br/><br/>
+                            <a href="/events/<%=events[i]._id%>"><%= events[i].location %></a><br/><br/>
+                            <a href="/events/<%=events[i]._id%>"><%= events[i].startDate %></a>&nbsp &nbsp
+                            <a href="/events/<%=events[i]._id%>"><%= events[i].startTime %></a>
                         </div>
                         <div class="card-action">
                           <a href="/registration/new">Register</a>
@@ -41,9 +53,6 @@
     <% } %>
         </div>
         </section>
-        <section id="eventsmgt">
-          <a href="/events/show">Show a list of events</a>
-          <a href="/events/new">Create a new event</a>
-        </section>
+        
   </body>
 </html>
