@@ -30,7 +30,7 @@ router.get("/", (req, res) => {
   });
 });
 
-// New    : GET    '/registration/new'
+// // New    : GET    '/registrations/new'
 router.get("/new/:eventID", (req, res) => {
   // find all user and then pass the data to render
   // then in new.ejs --- can use the users found in select tag
@@ -39,24 +39,15 @@ router.get("/new/:eventID", (req, res) => {
   });
 });
 
-// // New    : GET    '/registrations/new'
-// router.get("/new", (req, res) => {
-//   // find all user and then pass the data to render
-//   // then in new.ejs --- can use the users found in select tag
-//   res.render("registration/new.ejs", {
-//     currentUser: req.session.currentUser
-//   });
-// });
-
-// // // Show   : GET    '/registrations/:id'
-// router.get("/events/register/:eventID", (req, res) => {
-//   Registration.findById(req.params.id, (err, registration) => {
-//     if (err) {
-//       console.log(err);
-//     }
-//     res.render("registration/show.ejs", { registration: registration });
-//   });
-// });
+// // Show   : GET    '/registrations/:id'
+router.get("/:id", (req, res) => {
+  Registration.findById(req.params.id, (err, registration) => {
+    if (err) {
+      console.log(err);
+    }
+    res.render("registration/show.ejs", { registration: registration });
+  });
+});
 
 // // Create : POST   '/registration'
 router.post("/", (req, res) => {
@@ -65,47 +56,44 @@ router.post("/", (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      res.redirect("/events/" + event._id);
+      res.redirect("/events" + event._id);
     }
   });
 });
 
 // // Edit   : GET    '/registration/:id/edit'
-router.get("/events/register/eventID/edit"),
-  (req, res) => {
-    Registration.findById(req.params.id, (err, registration) => {
-      if (err) {
-        console.log(err);
-      }
-      res.render("registration/edit.ejs", { registration: registration });
-    });
-  };
+router.get("/:id/edit", (req, res) => {
+  Registration.findById(req.params.id, (err, registration) => {
+    if (err) {
+      console.log(err);
+    }
+    res.render("registration/edit.ejs", { registration: registration });
+  });
+});
 
 // // Update : PUT    '/registrations/:id'
-router.put("/events/register/eventID"),
-  (req, res) => {
-    Registration.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true },
-      (err, event) => {
-        if (err) {
-          console.log(err);
-        }
-        res.redirect("/events/" + event._id);
-      }
-    );
-  };
-
-// // Delete : DELETE '/registrations/:id'
-router.delete("/events/register/eventID"),
-  (req, res) => {
-    Registration.findByIdAndRemove(req.params.id, (err, registration) => {
+router.put("/:id", (req, res) => {
+  Registration.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, event) => {
       if (err) {
         console.log(err);
       }
-      res.redirect("/events");
-    });
-  };
+      res.redirect("/events" + event._id);
+    }
+  );
+});
+
+// // Delete : DELETE '/registrations/:id'
+router.delete("/:id", (req, res) => {
+  Registration.findByIdAndRemove(req.params.id, (err, registration) => {
+    if (err) {
+      console.log(err);
+    }
+    res.redirect("/events");
+  });
+});
 
 module.exports = router;

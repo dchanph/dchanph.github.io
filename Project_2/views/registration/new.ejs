@@ -13,22 +13,21 @@
       <h3>Register for an event</h3>
       <div class="jumbo">
         <form class="edit" action="/registration" method="POST">
-          <label for="title">Event_ID </label><br />
-          <input type="text" name="eventID" value="" required /><br />
           <label for="user">Staff_ID </label><br />
           <input
             type="text"
             name="user"
-            placeholder="Enter Staff ID"
             value="<%=currentUser._id%>"
             required
           /><br /><br />
+          <label for="title">Event_ID </label><br />
+          <input type="text" name="eventID" value="" required /><br />
           <label for="name">first_name </label><br />
           <input
             type="text"
             name="first_name"
             placeholder="Enter first name"
-            value="<%=currentUser.name%>"
+            value="<%=currentUser.first_name%>"
             required
           /><br /><br />
           <label for="name">last_name </label><br />
@@ -36,7 +35,7 @@
             type="text"
             name="last_name"
             placeholder="Enter last name"
-            value="<%=currentUser.name%>"
+            value="<%=currentUser.last_name%>"
             required
           /><br /><br />
           <label for="ticketsQty">Number of Tickets </label><br />
@@ -47,12 +46,7 @@
             min="0"
             value="0"
           /><br /><br />
-          <input
-            type="submit"
-            name="submit"
-            value="Register"
-            class="register-button"
-          />
+          <input type="submit" name="submit" value="Register" class="button" />
         </form>
       </div>
     </div>

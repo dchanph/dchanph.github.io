@@ -14,13 +14,13 @@
 </header>
     <section id="about">
       <p>
-        Discover the latest events to make<br/><br/> 
+        Discover the latest events curated to make<br/><br/> 
         work and play better.
       </p>
     </section>
     <section id="eventsmgt">
         <div class = "fixed-action-btn">
-          <a href="/events/new" class="btn waves-effect waves-light green white-text">Create an event</a>
+          <a href="/events/new" class="button">Create Event</a>
         </div>
     </section>
     <section id="details">
@@ -28,8 +28,8 @@
     <% for(let i=0; i<events.length; i++) { %>
             <div>
                 <div class="row">
-                    <div class="col s4">4-columns (one-half)</div>
-                    <div class="col s4">4-columns (one-half)</div>
+                    <div class="col s6">4-columns (one-half)</div>
+                    <div class="col s6">4-columns (one-half)</div>
                     <!-- <div class="col s4"> -->
                       <div class="card">
                         <div class="card-image">
@@ -43,8 +43,12 @@
                             <a href="/events/<%=events[i]._id%>"><%= events[i].startTime %></a>
                         </div>
                         <div class="card-action">
-                          <a href=<a href="/registration/new/<%=events[i]._id%">Register</a>
+                          <a href="/registration/new">Register</a>
                         </div>
+                      </div>
+                      <!-- <div class="card-action">
+                        <a href="/registration/new/<%=events[i]._id%>">Register</a>
+                      </div> -->
                       </div>
                     </div>
                   </div>

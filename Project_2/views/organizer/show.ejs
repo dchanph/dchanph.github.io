@@ -25,15 +25,18 @@
       </section><br/><br/>
 
       <form>
-        <input class = "btn waves-effect waves-light green white-text" type = "button" value = "Edit Event"
+        <input class = "button" type = "button" value = "Edit Event"
         onclick=<a href="/events/edit"/><br/><br/>
         </form>
 
       <!-- delete button here -->
       <form action="/events/<%=event._id%>?_method=DELETE" method="post">
-        <input class="btn waves-effect waves-red white-text" type="submit" value = "Delete Event">
+        <input class="button" type="submit" value = "Delete Event"><br/><br/>
+      </form>
+      
+      <form>
+        <a href="/events" class="button">Back to Events</a>
       </form>
     </section>
   </body>
 </html>
-

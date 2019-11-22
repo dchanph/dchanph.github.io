@@ -7,7 +7,8 @@ const registrationSchema = mongoose.Schema({
   last_name: String,
   dept: String,
   event: { type: Schema.Types.ObjectId, ref: "Event" },
-  ticketsQty: Number
+  ticketsQty: Number,
+  totalCost: Number
 });
 
 const Registration = mongoose.model("Registration", registrationSchema);
