@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const registrationSchema = mongoose.Schema({
   user: { type: Schema.Types.ObjectId, ref: "User" },
-  user: String,
   first_name: String,
   last_name: String,
   dept: String,
