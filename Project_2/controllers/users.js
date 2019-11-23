@@ -20,7 +20,7 @@ users.post("/", (req, res) => {
     }
     console.log(createdUser);
     // once user is created redirect back to 'index page'
-    res.redirect("/");
+    res.redirect("/events");
   });
 });
 

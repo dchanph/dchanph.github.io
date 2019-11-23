@@ -1,26 +1,27 @@
 // _________________
 // //Dependencies
-// //___________________
+//___________________
 //require express so we can use router
 const express = require("express");
 const router = express.Router();
 
-// //___________________
+//___________________
 // //Models
-// //___________________
+//___________________
 // //get access to the Registration model
 const Registration = require("../models/registration");
+const Event = require("../models/events");
 
-// //___________________
-// //Json Route
-// //___________________
+//___________________
+//Json Route
+//___________________
 router.get("/json", (req, res) => {
   Registration.find((err, registrations) => {
     res.send(registrations);
   });
 });
 
-// // Index  : GET    '/registrations'
+// Index  : GET    '/registrations'
 router.get("/", (req, res) => {
   Registration.find({}, (err, registrations) => {
     if (err) {
@@ -31,14 +32,29 @@ router.get("/", (req, res) => {
 });
 
 // // New    : GET    '/registrations/new'
+// router.get("/new/", (req, res) => {
+//   // find all user and then pass the data to render
+//   // then in new.ejs --- can use the users found in select tag
+//   res.render("registration/new.ejs", {
+//     currentUser: req.session.currentUser
+//   });
+// });
+
+// New    : GET    '/registrations/new'
 router.get("/new/:eventID", (req, res) => {
+  Event.findById(req.params.eventID, (err, foundEvent) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("registration/new.ejs", {
+        currentUser: req.session.currentUser,
+        event: foundEvent
+      });
+    }
+  });
   // find all user and then pass the data to render
   // then in new.ejs --- can use the users found in select tag
-  res.render("registration/new.ejs", {
-    currentUser: req.session.currentUser
-  });
 });
-
 // // Show   : GET    '/registrations/:id'
 router.get("/:id", (req, res) => {
   Registration.findById(req.params.id, (err, registration) => {
@@ -52,13 +68,23 @@ router.get("/:id", (req, res) => {
 // // Create : POST   '/registration'
 router.post("/", (req, res) => {
   console.log(req.body);
-  Registration.create(req.body, (err, registration) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.redirect("/events" + event._id);
+  Registration.create(
+    {
+      user: req.body.user,
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      eventID: req.body.eventID,
+      ticketsQty: req.body.ticketsQty,
+      totalCost: 10
+    },
+    (err, registration) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.redirect("/events");
+      }
     }
-  });
+  );
 });
 
 // // Edit   : GET    '/registration/:id/edit'
@@ -81,7 +107,7 @@ router.put("/:id", (req, res) => {
       if (err) {
         console.log(err);
       }
-      res.redirect("/events" + event._id);
+      res.redirect("/events/" + event._id);
     }
   );
 });
